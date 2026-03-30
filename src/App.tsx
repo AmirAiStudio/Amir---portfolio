@@ -386,7 +386,16 @@ const AhmedPortfolio = () => {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <span className="font-black text-2xl tracking-tighter text-blue-600">{t.nav.logo}</span>
+          <a 
+            href="#" 
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="font-black text-2xl tracking-tighter text-blue-600 hover:opacity-80 transition-opacity"
+          >
+            {t.nav.logo}
+          </a>
           <div className="hidden md:flex gap-10 text-sm font-bold text-gray-500 uppercase tracking-widest">
             <a href="#services" className="hover:text-blue-600 transition-colors">{t.nav.services}</a>
             <a href="#case-studies" className="hover:text-blue-600 transition-colors">{t.nav.caseStudies}</a>
