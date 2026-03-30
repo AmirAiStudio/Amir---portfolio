@@ -626,7 +626,7 @@ const AhmedPortfolio = () => {
       </section>
 
       {/* Case Studies Section */}
-      <section id="case-studies" className="py-32 px-6 bg-gray-50 rounded-[4rem] mx-4 md:mx-6 overflow-hidden">
+      <section id="case-studies" className="py-32 px-10 md:px-24 bg-gray-50 rounded-[4rem] mx-4 md:mx-6">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -645,7 +645,7 @@ const AhmedPortfolio = () => {
             <button 
               onClick={() => setCurrentSlide(prev => Math.max(0, prev - 1))}
               disabled={currentSlide === 0}
-              className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 w-14 h-14 md:w-16 md:h-16 rounded-full bg-white shadow-xl border border-gray-100 flex items-center justify-center transition-all ${currentSlide === 0 ? "opacity-0 pointer-events-none" : "opacity-100 hover:bg-blue-600 hover:text-white hover:scale-110"}`}
+              className={`absolute left-0 md:-left-20 top-1/2 -translate-y-1/2 z-20 w-14 h-14 md:w-16 md:h-16 rounded-full bg-white shadow-xl border border-gray-100 flex items-center justify-center transition-all ${currentSlide === 0 ? "opacity-0 pointer-events-none" : "opacity-100 hover:bg-blue-600 hover:text-white hover:scale-110"}`}
             >
               <ChevronLeft size={28} className={lang === "ar" ? "rotate-180" : ""} />
             </button>
@@ -659,7 +659,7 @@ const AhmedPortfolio = () => {
                 setCurrentSlide(prev => Math.min(maxSlide, prev + 1));
               }}
               disabled={currentSlide >= (isMobile ? t.caseStudies.items.length - 1 : t.caseStudies.items.length - 2)}
-              className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-20 w-14 h-14 md:w-16 md:h-16 rounded-full bg-white shadow-xl border border-gray-100 flex items-center justify-center transition-all ${currentSlide >= (isMobile ? t.caseStudies.items.length - 1 : t.caseStudies.items.length - 2) ? "opacity-0 pointer-events-none" : "opacity-100 hover:bg-blue-600 hover:text-white hover:scale-110"}`}
+              className={`absolute right-0 md:-right-20 top-1/2 -translate-y-1/2 z-20 w-14 h-14 md:w-16 md:h-16 rounded-full bg-white shadow-xl border border-gray-100 flex items-center justify-center transition-all ${currentSlide >= (isMobile ? t.caseStudies.items.length - 1 : t.caseStudies.items.length - 2) ? "opacity-0 pointer-events-none" : "opacity-100 hover:bg-blue-600 hover:text-white hover:scale-110"}`}
             >
               <ChevronRight size={28} className={lang === "ar" ? "rotate-180" : ""} />
             </button>
