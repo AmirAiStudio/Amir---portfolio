@@ -638,30 +638,32 @@ const AhmedPortfolio = () => {
               <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">{t.caseStudies.title}</h2>
               <p className="text-gray-500 max-w-md text-lg font-medium">{t.caseStudies.subtitle}</p>
             </div>
-            <div className={`flex gap-4 ${lang === "ar" ? "flex-row-reverse" : ""}`}>
-              <button 
-                onClick={() => setCurrentSlide(prev => Math.max(0, prev - 1))}
-                disabled={currentSlide === 0}
-                className={`w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center transition-all ${currentSlide === 0 ? "text-gray-200 cursor-not-allowed" : "text-gray-400 hover:border-blue-600 hover:text-blue-600"}`}
-              >
-                <ChevronRight size={24} className="rotate-180" />
-              </button>
-              <button 
-                onClick={() => {
-                  const maxSlide = isMobile 
-                    ? t.caseStudies.items.length - 1 
-                    : t.caseStudies.items.length - 2;
-                  setCurrentSlide(prev => Math.min(maxSlide, prev + 1));
-                }}
-                disabled={currentSlide >= (isMobile ? t.caseStudies.items.length - 1 : t.caseStudies.items.length - 2)}
-                className={`w-12 h-12 rounded-full border transition-all ${currentSlide >= (isMobile ? t.caseStudies.items.length - 1 : t.caseStudies.items.length - 2) ? "border-gray-200 text-gray-200 cursor-not-allowed" : "border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"}`}
-              >
-                <ChevronRight size={24} />
-              </button>
-            </div>
           </motion.div>
 
-          <div className="relative overflow-visible">
+          <div className="relative group/carousel">
+            {/* Left Arrow */}
+            <button 
+              onClick={() => setCurrentSlide(prev => Math.max(0, prev - 1))}
+              disabled={currentSlide === 0}
+              className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 w-14 h-14 md:w-16 md:h-16 rounded-full bg-white shadow-xl border border-gray-100 flex items-center justify-center transition-all ${currentSlide === 0 ? "opacity-0 pointer-events-none" : "opacity-100 hover:bg-blue-600 hover:text-white hover:scale-110"}`}
+            >
+              <ChevronLeft size={28} className={lang === "ar" ? "rotate-180" : ""} />
+            </button>
+
+            {/* Right Arrow */}
+            <button 
+              onClick={() => {
+                const maxSlide = isMobile 
+                  ? t.caseStudies.items.length - 1 
+                  : t.caseStudies.items.length - 2;
+                setCurrentSlide(prev => Math.min(maxSlide, prev + 1));
+              }}
+              disabled={currentSlide >= (isMobile ? t.caseStudies.items.length - 1 : t.caseStudies.items.length - 2)}
+              className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-20 w-14 h-14 md:w-16 md:h-16 rounded-full bg-white shadow-xl border border-gray-100 flex items-center justify-center transition-all ${currentSlide >= (isMobile ? t.caseStudies.items.length - 1 : t.caseStudies.items.length - 2) ? "opacity-0 pointer-events-none" : "opacity-100 hover:bg-blue-600 hover:text-white hover:scale-110"}`}
+            >
+              <ChevronRight size={28} className={lang === "ar" ? "rotate-180" : ""} />
+            </button>
+
             <div className="overflow-hidden -mx-4 px-4">
               <motion.div 
                 className="flex gap-6 md:gap-10"
@@ -683,51 +685,22 @@ const AhmedPortfolio = () => {
 
           {/* Decorative Navigation (Dots & Arrowheads) */}
           <div className="mt-20 flex flex-col items-center gap-10">
-            <div className="flex items-center gap-12">
-              <button 
-                onClick={() => setCurrentSlide(prev => Math.max(0, prev - 1))}
-                disabled={currentSlide === 0}
-                className={`group flex items-center gap-4 transition-all ${currentSlide === 0 ? "opacity-30 cursor-not-allowed" : "hover:text-blue-600"}`}
-              >
-                <div className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center group-hover:border-blue-600 group-hover:bg-blue-50 transition-all">
-                  <ChevronLeft size={24} className={lang === "ar" ? "rotate-180" : ""} />
-                </div>
-                <span className="text-[10px] font-black uppercase tracking-[0.3em] hidden sm:block text-gray-400 group-hover:text-blue-600">Prev</span>
-              </button>
-
-              <div className="flex items-center gap-3">
-                {t.caseStudies.items.map((_, i) => {
-                  const maxSlide = isMobile 
-                    ? t.caseStudies.items.length - 1 
-                    : t.caseStudies.items.length - 2;
-                  if (i > maxSlide) return null;
-                  return (
-                    <button
-                      key={i}
-                      onClick={() => setCurrentSlide(i)}
-                      className={`h-1.5 rounded-full transition-all duration-500 ${
-                        currentSlide === i ? 'w-12 bg-blue-600 shadow-[0_0_15px_rgba(37,99,235,0.4)]' : 'w-2 bg-gray-200 hover:bg-gray-300'
-                      }`}
-                    />
-                  );
-                })}
-              </div>
-
-              <button 
-                onClick={() => {
-                  const maxSlide = isMobile 
-                    ? t.caseStudies.items.length - 1 
-                    : t.caseStudies.items.length - 2;
-                  setCurrentSlide(prev => Math.min(maxSlide, prev + 1));
-                }}
-                disabled={currentSlide >= (isMobile ? t.caseStudies.items.length - 1 : t.caseStudies.items.length - 2)}
-                className={`group flex items-center gap-4 transition-all ${currentSlide >= (isMobile ? t.caseStudies.items.length - 1 : t.caseStudies.items.length - 2) ? "opacity-30 cursor-not-allowed" : "hover:text-blue-600"}`}
-              >
-                <span className="text-[10px] font-black uppercase tracking-[0.3em] hidden sm:block text-gray-400 group-hover:text-blue-600">Next</span>
-                <div className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center group-hover:border-blue-600 group-hover:bg-blue-50 transition-all">
-                  <ChevronRight size={24} className={lang === "ar" ? "rotate-180" : ""} />
-                </div>
-              </button>
+            <div className="flex items-center gap-3">
+              {t.caseStudies.items.map((_, i) => {
+                const maxSlide = isMobile 
+                  ? t.caseStudies.items.length - 1 
+                  : t.caseStudies.items.length - 2;
+                if (i > maxSlide) return null;
+                return (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentSlide(i)}
+                    className={`h-1.5 rounded-full transition-all duration-500 ${
+                      currentSlide === i ? 'w-12 bg-blue-600 shadow-[0_0_15px_rgba(37,99,235,0.4)]' : 'w-2 bg-gray-200 hover:bg-gray-300'
+                    }`}
+                  />
+                );
+              })}
             </div>
 
             {/* Subtle Arrowhead Accents */}
