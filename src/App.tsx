@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useState } from "react";
 import { motion } from "motion/react";
 import { 
   Briefcase, 
@@ -22,100 +23,383 @@ import {
   BarChart3,
   Layers,
   Zap,
-  MessageSquare
+  MessageSquare,
+  Languages
 } from "lucide-react";
 
 const AhmedPortfolio = () => {
-  const services = [
-    {
-      title: "Operations Setup & System Building",
-      icon: <Layers className="text-blue-600" size={28} />,
-      description: "Building robust operational frameworks from the ground up to ensure your business runs like a well-oiled machine."
-    },
-    {
-      title: "Team Training (Agents, Leaders, Managers)",
-      icon: <Users className="text-blue-600" size={28} />,
-      description: "Developing high-performing teams through tailored training programs for every level of leadership and staff."
-    },
-    {
-      title: "KPI & Performance Management Systems",
-      icon: <BarChart3 className="text-blue-600" size={28} />,
-      description: "Implementing data-driven systems to track, analyze, and improve performance across all business units."
-    },
-    {
-      title: "Customer Support Optimization",
-      icon: <MessageSquare className="text-blue-600" size={28} />,
-      description: "Streamlining support workflows and tools (Zendesk, HubSpot) to deliver exceptional customer experiences."
-    },
-    {
-      title: "Business Process Improvement",
-      icon: <Zap className="text-blue-600" size={28} />,
-      description: "Identifying bottlenecks and optimizing workflows to increase efficiency and reduce operational costs."
-    }
-  ];
+  const [lang, setLang] = useState<"en" | "ar">("en");
 
-  const caseStudies = [
-    {
-      title: "Call Center Performance Transformation",
-      challenge: "Low efficiency and inconsistent service quality in a high-pressure environment.",
-      result: "Improved team performance by restructuring workflows and implementing a custom KPI tracking system.",
-      tags: ["Operations", "KPIs", "Training"]
+  const translations = {
+    en: {
+      nav: {
+        logo: "AHMED AMIR.",
+        services: "Services",
+        caseStudies: "Case Studies",
+        about: "About",
+        contact: "Contact",
+      },
+      hero: {
+        badge: "Operations & Business Consultant",
+        headline: "I Help Businesses Build Systems, Train Teams & Scale Operations",
+        subheadline: "Operations Manager & Business Consultant with 8+ years of experience helping companies improve performance, structure operations, and grow efficiently.",
+        ctaBook: "Book a Consultation",
+        ctaWork: "View My Work",
+        efficiency: "Efficiency",
+        growth: "Growth",
+        optimizing: "Optimizing",
+        operations: "Operations"
+      },
+      clients: {
+        title: "Companies I’ve Worked With"
+      },
+      services: {
+        title: "What I Can Help You With",
+        subtitle: "Strategic solutions designed to solve operational problems and drive sustainable business growth.",
+        items: [
+          {
+            title: "Operations Setup & System Building",
+            description: "Building robust operational frameworks from the ground up to ensure your business runs like a well-oiled machine."
+          },
+          {
+            title: "Team Training (Agents, Leaders, Managers)",
+            description: "Developing high-performing teams through tailored training programs for every level of leadership and staff."
+          },
+          {
+            title: "KPI & Performance Management Systems",
+            description: "Implementing data-driven systems to track, analyze, and improve performance across all business units."
+          },
+          {
+            title: "Customer Support Optimization",
+            description: "Streamlining support workflows and tools (Zendesk, HubSpot) to deliver exceptional customer experiences."
+          },
+          {
+            title: "Business Process Improvement",
+            description: "Identifying bottlenecks and optimizing workflows to increase efficiency and reduce operational costs."
+          }
+        ]
+      },
+      caseStudies: {
+        title: "Case Studies",
+        subtitle: "Real-world examples of operational excellence and business transformation.",
+        challenge: "The Challenge",
+        result: "The Result",
+        whatIDid: "What I Did",
+        cta: "Want similar results? Let's talk",
+        items: [
+          {
+            title: "Call Center Performance Transformation",
+            challenge: "Low efficiency and inconsistent service quality in a high-pressure environment.",
+            result: "Improved team performance by restructuring workflows and implementing a custom KPI tracking system.",
+            tags: ["Operations", "KPIs", "Training"],
+            actions: [
+              "Redesigned workflows for efficiency",
+              "Built KPI tracking system",
+              "Improved team structure",
+              "Enhanced service consistency"
+            ]
+          },
+          {
+            title: "Startup Scalability Framework",
+            challenge: "A rapidly growing startup lacked the structure to handle increasing demand.",
+            result: "Built a complete operational system, improving organization and providing a clear path for scalability.",
+            tags: ["System Building", "Scaling", "Process"],
+            actions: [
+              "Built full operational system",
+              "Defined workflows & responsibilities",
+              "Created scalable structure",
+              "Improved execution and organization"
+            ]
+          }
+        ]
+      },
+      about: {
+        title: "Focused on Results, Driven by Systems.",
+        text1: "I don't just consult; I partner with businesses to build the systems that allow them to scale without chaos. My approach is rooted in practical experience with global giants like Amazon.",
+        text2: "Whether it's training your team to reach peak performance or restructuring your entire operational workflow, my goal is always the same: measurable efficiency and sustainable growth.",
+        points: ["Building Systems", "Training Teams", "Solving Problems", "Scaling Growth"],
+        experience: "Years of Solving Operational Problems"
+      },
+      contact: {
+        title: "Let’s Improve Your Business Together",
+        subtitle: "Ready to optimize your operations and scale your team? Let's discuss how we can build a more efficient future for your company.",
+        ctaBook: "Book a Consultation",
+        ctaEmail: "Contact via Email"
+      },
+      footer: {
+        description: "Operations Manager & Business Consultant",
+        rights: "© 2026 Ahmed Amir Ahmed."
+      }
     },
-    {
-      title: "Startup Scalability Framework",
-      challenge: "A rapidly growing startup lacked the structure to handle increasing demand.",
-      result: "Built a complete operational system, improving organization and providing a clear path for scalability.",
-      tags: ["System Building", "Scaling", "Process"]
+    ar: {
+      nav: {
+        logo: "أحمد أمير.",
+        services: "الخدمات",
+        caseStudies: "دراسات الحالة",
+        about: "من أنا",
+        contact: "تواصل معي",
+      },
+      hero: {
+        badge: "مستشار عمليات وأعمال",
+        headline: "أساعد الشركات على بناء الأنظمة، تدريب الفرق وتوسيع العمليات",
+        subheadline: "مدير عمليات ومستشار أعمال بخبرة تزيد عن 8 سنوات في مساعدة الشركات على تحسين الأداء وهيكلة العمليات والنمو بكفاءة.",
+        ctaBook: "احجز استشارة",
+        ctaWork: "عرض أعمالي",
+        efficiency: "الكفاءة",
+        growth: "النمو",
+        optimizing: "تحسين",
+        operations: "العمليات"
+      },
+      clients: {
+        title: "شركات عملت معها"
+      },
+      services: {
+        title: "كيف يمكنني مساعدتك",
+        subtitle: "حلول استراتيجية مصممة لحل المشكلات التشغيلية ودفع نمو الأعمال المستدام.",
+        items: [
+          {
+            title: "إعداد العمليات وبناء الأنظمة",
+            description: "بناء أطر عمل تشغيلية قوية من الألف إلى الياء لضمان سير عمل عملك بسلاسة تامة."
+          },
+          {
+            title: "تدريب الفرق (وكلاء، قادة، مديرين)",
+            description: "تطوير فرق عالية الأداء من خلال برامج تدريبية مخصصة لكل مستوى من مستويات القيادة والموظفين."
+          },
+          {
+            title: "أنظمة إدارة الأداء والمؤشرات الرئيسية",
+            description: "تنفيذ أنظمة قائمة على البيانات لتتبع وتحليل وتحسين الأداء عبر جميع وحدات العمل."
+          },
+          {
+            title: "تحسين دعم العملاء",
+            description: "تبسيط سير عمل الدعم والأدوات (Zendesk، HubSpot) لتقديم تجارب استثنائية للعملاء."
+          },
+          {
+            title: "تحسين العمليات التجارية",
+            description: "تحديد الاختناقات وتحسين سير العمل لزيادة الكفاءة وتقليل التكاليف التشغيلية."
+          }
+        ]
+      },
+      caseStudies: {
+        title: "دراسات حالة",
+        subtitle: "أمثلة واقعية للتميز التشغيلي وتحول الأعمال.",
+        challenge: "التحدي",
+        result: "النتيجة",
+        whatIDid: "ماذا فعلت",
+        cta: "هل تريد نتائج مماثلة؟ دعنا نتحدث",
+        items: [
+          {
+            title: "تحول أداء مركز الاتصال",
+            challenge: "كفاءة منخفضة وجودة خدمة غير متسقة في بيئة عالية الضغط.",
+            result: "تحسين أداء الفريق من خلال إعادة هيكلة سير العمل وتنفيذ نظام مخصص لتتبع مؤشرات الأداء.",
+            tags: ["العمليات", "مؤشرات الأداء", "التدريب"],
+            actions: [
+              "إعادة تصميم سير العمل لتحقيق الكفاءة",
+              "بناء نظام تتبع مؤشرات الأداء",
+              "تحسين هيكل الفريق",
+              "تعزيز اتساق الخدمة"
+            ]
+          },
+          {
+            title: "إطار قابلية التوسع للشركات الناشئة",
+            challenge: "افتقرت شركة ناشئة سريعة النمو إلى الهيكل اللازم للتعامل مع الطلب المتزايد.",
+            result: "بناء نظام تشغيلي كامل، وتحسين التنظيم وتوفير مسار واضح لقابلية التوسع.",
+            tags: ["بناء الأنظمة", "التوسع", "العمليات"],
+            actions: [
+              "بناء نظام تشغيلي كامل",
+              "تحديد سير العمل والمسؤوليات",
+              "إنشاء هيكل قابل للتوسع",
+              "تحسين التنفيذ والتنظيم"
+            ]
+          }
+        ]
+      },
+      about: {
+        title: "التركيز على النتائج، مدفوع بالأنظمة.",
+        text1: "أنا لا أقدم الاستشارات فحسب؛ بل أشارك الشركات في بناء الأنظمة التي تسمح لها بالتوسع دون فوضى. نهجي متجذر في الخبرة العملية مع عمالقة عالميين مثل أمازون.",
+        text2: "سواء كان الأمر يتعلق بتدريب فريقك للوصول إلى ذروة الأداء أو إعادة هيكلة سير العمل التشغيلي بالكامل، فإن هدفي هو نفسه دائمًا: كفاءة ملموسة ونمو مستدام.",
+        points: ["بناء الأنظمة", "تدريب الفرق", "حل المشكلات", "توسيع النمو"],
+        experience: "سنوات من حل المشكلات التشغيلية"
+      },
+      contact: {
+        title: "لنعمل على تحسين عملك معًا",
+        subtitle: "هل أنت مستعد لتحسين عملياتك وتوسيع فريقك؟ دعنا نناقش كيف يمكننا بناء مستقبل أكثر كفاءة لشركتك.",
+        ctaBook: "احجز استشارة",
+        ctaEmail: "تواصل عبر البريد"
+      },
+      footer: {
+        description: "مدير عمليات ومستشار أعمال",
+        rights: "© 2026 أحمد أمير أحمد."
+      }
     }
+  };
+
+  const t = translations[lang];
+
+  const servicesIcons = [
+    <Layers className="text-blue-600" size={28} />,
+    <Users className="text-blue-600" size={28} />,
+    <BarChart3 className="text-blue-600" size={28} />,
+    <MessageSquare className="text-blue-600" size={28} />,
+    <Zap className="text-blue-600" size={28} />
   ];
 
   const clients = [
     "Amazon", "Intouch CX", "AOI", "B.Tech", "Connect Squad", "Servo Travel", "El Helou Group", "Rehana Hotels"
   ];
 
-  const experiences = [
-    {
-      title: "Operations Manager",
-      company: "Connect Squad",
-      period: "July 2025 – Present",
-      description: "Overseeing daily operations and team performance. Leading strategic planning and workflow optimization to support client goals.",
-    },
-    {
-      title: "Team Leader & LOB Manager",
-      company: "Intouch CX",
-      period: "July 2024 – July 2025",
-      description: "Managed customer support teams. Top Performer Q1 2025. Focused on performance tracking and team development.",
-    },
-    {
-      title: "Customer Service | SME | Assistant Trainer",
-      company: "Amazon",
-      period: "July 2022 – May 2024",
-      description: "Subject Matter Expert and Assistant Trainer. Onboarded new hires and maintained high service standards.",
-    }
-  ];
-
   const whatsappLink = "https://wa.me/201144240400";
 
+  const toggleLang = () => {
+    setLang(prev => prev === "en" ? "ar" : "en");
+  };
+
+  const CaseStudyCard = ({ study, t, lang }: any) => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    return (
+      <motion.div 
+        className="relative h-[520px] w-full perspective-2000 cursor-pointer group"
+        onClick={() => setIsFlipped(!isFlipped)}
+        whileHover={{ 
+          scale: 1.03,
+          rotateX: 2,
+          rotateY: -2,
+        }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      >
+        <motion.div
+          className="relative w-full h-full preserve-3d"
+          animate={{ rotateY: isFlipped ? 180 : 0 }}
+          transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
+        >
+          {/* Front Side */}
+          <div 
+            className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 p-8 flex flex-col overflow-hidden group-hover:shadow-[0_20px_50px_rgba(59,130,246,0.1)] transition-all duration-500"
+            style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+          >
+            {/* Decorative Gradient Accent */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110" />
+            
+            <div className="flex flex-wrap gap-2 mb-6 relative z-10">
+              {study.tags.map((tag: string, ti: number) => (
+                <span key={ti} className="text-[10px] font-black uppercase tracking-widest text-blue-600 bg-blue-50/80 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-blue-100/50">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <h3 className="text-2xl font-black mb-6 leading-tight text-gray-900 relative z-10">
+              {study.title}
+            </h3>
+
+            <div className="space-y-6 flex-grow relative z-10">
+              <div className="p-4 rounded-2xl bg-gray-50/50 border border-gray-100/50">
+                <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 flex items-center gap-2">
+                  <span className="w-1 h-1 bg-gray-400 rounded-full" />
+                  {t.caseStudies.challenge}
+                </p>
+                <p className="text-gray-600 font-medium leading-relaxed text-sm line-clamp-3 italic">
+                  "{study.challenge}"
+                </p>
+              </div>
+
+              <div className="p-5 rounded-2xl bg-blue-600 shadow-lg shadow-blue-200 relative overflow-hidden group/result">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover/result:opacity-100 transition-opacity" />
+                <p className="text-[10px] font-black text-blue-100 uppercase tracking-widest mb-2 flex items-center gap-2">
+                  <Award size={12} />
+                  {t.caseStudies.result}
+                </p>
+                <p className="text-white font-bold leading-relaxed text-base">
+                  {study.result}
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-gray-50 flex items-center justify-between text-blue-600 font-bold text-xs uppercase tracking-widest group-hover:translate-x-1 transition-transform">
+              <span>{lang === "en" ? "Deep Dive" : "تفاصيل أكثر"}</span>
+              <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                <ChevronRight size={16} className={lang === "ar" ? "rotate-180" : ""} />
+              </div>
+            </div>
+          </div>
+
+          {/* Back Side */}
+          <div 
+            className="absolute inset-0 w-full h-full backface-hidden bg-[#0f172a] rounded-[2rem] p-8 flex flex-col text-white shadow-2xl border border-white/5"
+            style={{ 
+              transform: "rotateY(180deg)", 
+              backfaceVisibility: 'hidden', 
+              WebkitBackfaceVisibility: 'hidden' 
+            }}
+          >
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent)] pointer-events-none" />
+            
+            <h3 className="text-lg font-black mb-8 text-blue-400 uppercase tracking-widest flex items-center gap-3 relative z-10">
+              <div className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                <Zap size={16} className="text-blue-400" />
+              </div>
+              {t.caseStudies.whatIDid}
+            </h3>
+
+            <ul className="space-y-5 flex-grow relative z-10">
+              {study.actions.map((action: string, ai: number) => (
+                <motion.li 
+                  key={ai} 
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3 + (ai * 0.1) }}
+                  className="flex items-start gap-4 group/item"
+                >
+                  <div className="mt-1 w-5 h-5 rounded-md bg-white/5 border border-white/10 flex items-center justify-center group-hover/item:bg-blue-500/20 group-hover/item:border-blue-500/50 transition-all">
+                    <CheckCircle2 size={12} className="text-blue-500" />
+                  </div>
+                  <span className="text-gray-300 font-medium leading-relaxed text-sm group-hover/item:text-white transition-colors">{action}</span>
+                </motion.li>
+              ))}
+            </ul>
+
+            <div className="mt-auto relative z-10">
+              <a 
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="w-full bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-4 flex items-center justify-between group/cta transition-all mb-6"
+              >
+                <span className="text-sm font-bold text-blue-400">{t.caseStudies.cta}</span>
+                <ExternalLink size={16} className="text-blue-400 group-hover/cta:translate-x-1 transition-transform" />
+              </a>
+              
+              <div className="flex items-center gap-2 text-white/40 font-bold text-[10px] uppercase tracking-widest justify-center">
+                <ChevronRight size={12} className={lang === "en" ? "rotate-180" : ""} />
+                <span>{lang === "en" ? "Back to summary" : "العودة للملخص"}</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </motion.div>
+    );
+  };
+
   return (
-    <div className="min-h-screen bg-[#fcfcfc] text-[#1a1a1a] font-sans selection:bg-blue-100">
+    <div className={`min-h-screen bg-[#fcfcfc] text-[#1a1a1a] font-sans selection:bg-blue-100 ${lang === "ar" ? "font-arabic" : ""}`} dir={lang === "ar" ? "rtl" : "ltr"}>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <span className="font-black text-2xl tracking-tighter text-blue-600">AHMED AMIR.</span>
+          <span className="font-black text-2xl tracking-tighter text-blue-600">{t.nav.logo}</span>
           <div className="hidden md:flex gap-10 text-sm font-bold text-gray-500 uppercase tracking-widest">
-            <a href="#services" className="hover:text-blue-600 transition-colors">Services</a>
-            <a href="#case-studies" className="hover:text-blue-600 transition-colors">Case Studies</a>
-            <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
-            <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
+            <a href="#services" className="hover:text-blue-600 transition-colors">{t.nav.services}</a>
+            <a href="#case-studies" className="hover:text-blue-600 transition-colors">{t.nav.caseStudies}</a>
+            <a href="#about" className="hover:text-blue-600 transition-colors">{t.nav.about}</a>
+            <a href="#contact" className="hover:text-blue-600 transition-colors">{t.nav.contact}</a>
           </div>
-          <a 
-            href={whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
+          <button 
+            onClick={toggleLang}
+            className="flex items-center gap-2 bg-gray-50 text-gray-900 px-4 py-2 rounded-xl text-sm font-bold hover:bg-gray-100 transition-all border border-gray-100"
           >
-            Book a Consultation
-          </a>
+            <Languages size={18} className="text-blue-600" />
+            {lang === "en" ? "العربية" : "English"}
+          </button>
         </div>
       </nav>
 
@@ -132,15 +416,17 @@ const AhmedPortfolio = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 rounded-lg text-xs font-black uppercase tracking-[0.2em] mb-8">
-              Operations & Business Consultant
+              {t.hero.badge}
             </span>
             <h1 className="text-5xl md:text-7xl font-black leading-[1.05] mb-8 tracking-tight text-gray-900">
-              I Help Businesses <br />
-              <span className="text-blue-600">Build Systems,</span> <br />
-              Train Teams & Scale Operations
+              {t.hero.headline.split(',').map((part, i) => (
+                <span key={i}>
+                  {i === 1 ? <><br /><span className="text-blue-600">{part},</span><br /></> : part}
+                </span>
+              ))}
             </h1>
             <p className="text-xl text-gray-500 leading-relaxed mb-12 max-w-2xl font-medium">
-              Operations Manager & Business Consultant with 8+ years of experience helping companies improve performance, structure operations, and grow efficiently.
+              {t.hero.subheadline}
             </p>
             <div className="flex flex-wrap gap-5">
               <a 
@@ -149,13 +435,13 @@ const AhmedPortfolio = () => {
                 rel="noopener noreferrer"
                 className="bg-blue-600 text-white px-10 py-5 rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-200 flex items-center gap-3"
               >
-                Book a Consultation <ChevronRight size={20} />
+                {t.hero.ctaBook} <ChevronRight size={20} className={lang === "ar" ? "rotate-180" : ""} />
               </a>
               <a 
                 href="#case-studies"
                 className="bg-white text-gray-900 border-2 border-gray-100 px-10 py-5 rounded-2xl font-bold hover:border-blue-600 hover:text-blue-600 transition-all flex items-center gap-3"
               >
-                View My Work
+                {t.hero.ctaWork}
               </a>
             </div>
           </motion.div>
@@ -177,8 +463,8 @@ const AhmedPortfolio = () => {
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-4xl font-black text-white leading-tight">
-                    Optimizing <br />
-                    <span className="text-blue-300">Operations</span>
+                    {t.hero.optimizing} <br />
+                    <span className="text-blue-300">{t.hero.operations}</span>
                   </h3>
                   <div className="flex gap-2">
                     {[1, 2, 3, 4].map((i) => (
@@ -194,11 +480,11 @@ const AhmedPortfolio = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                    <p className="text-xs font-black text-blue-300 uppercase tracking-widest mb-2">Efficiency</p>
+                    <p className="text-xs font-black text-blue-300 uppercase tracking-widest mb-2">{t.hero.efficiency}</p>
                     <p className="text-3xl font-black text-white">98%</p>
                   </div>
                   <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                    <p className="text-xs font-black text-blue-300 uppercase tracking-widest mb-2">Growth</p>
+                    <p className="text-xs font-black text-blue-300 uppercase tracking-widest mb-2">{t.hero.growth}</p>
                     <p className="text-3xl font-black text-white">+24%</p>
                   </div>
                 </div>
@@ -216,7 +502,7 @@ const AhmedPortfolio = () => {
           viewport={{ once: true }}
           className="max-w-7xl mx-auto px-6"
         >
-          <h2 className="text-center text-xs font-black uppercase tracking-[0.4em] text-gray-400 mb-16">Companies I’ve Worked With</h2>
+          <h2 className="text-center text-xs font-black uppercase tracking-[0.4em] text-gray-400 mb-16">{t.clients.title}</h2>
           <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-10 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
             {clients.map((client, i) => (
               <span key={i} className="text-2xl font-black text-gray-900 tracking-tighter">
@@ -236,14 +522,14 @@ const AhmedPortfolio = () => {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">What I Can Help You With</h2>
+            <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">{t.services.title}</h2>
             <p className="text-gray-500 max-w-2xl mx-auto text-lg font-medium leading-relaxed">
-              Strategic solutions designed to solve operational problems and drive sustainable business growth.
+              {t.services.subtitle}
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, i) => (
+            {t.services.items.map((service, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -254,7 +540,7 @@ const AhmedPortfolio = () => {
                 className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-100 transition-all duration-500"
               >
                 <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-8">
-                  {service.icon}
+                  {servicesIcons[i]}
                 </div>
                 <h3 className="text-xl font-black mb-4 leading-tight text-gray-900">{service.title}</h3>
                 <p className="text-gray-500 leading-relaxed font-medium">
@@ -276,10 +562,10 @@ const AhmedPortfolio = () => {
             className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8"
           >
             <div>
-              <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">Case Studies</h2>
-              <p className="text-gray-500 max-w-md text-lg font-medium">Real-world examples of operational excellence and business transformation.</p>
+              <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">{t.caseStudies.title}</h2>
+              <p className="text-gray-500 max-w-md text-lg font-medium">{t.caseStudies.subtitle}</p>
             </div>
-            <div className="flex gap-4">
+            <div className={`flex gap-4 ${lang === "ar" ? "flex-row-reverse" : ""}`}>
               <div className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-gray-400">
                 <ChevronRight size={24} className="rotate-180" />
               </div>
@@ -290,38 +576,8 @@ const AhmedPortfolio = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-10">
-            {caseStudies.map((study, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.2 }}
-                className="bg-white rounded-[3rem] overflow-hidden shadow-sm border border-gray-100 group hover:shadow-2xl transition-all duration-700"
-              >
-                <div className="p-12">
-                  <div className="flex gap-2 mb-8">
-                    {study.tags.map((tag, ti) => (
-                      <span key={ti} className="text-[10px] font-black uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <h3 className="text-3xl font-black mb-6 leading-tight text-gray-900 group-hover:text-blue-600 transition-colors">
-                    {study.title}
-                  </h3>
-                  <div className="space-y-6">
-                    <div>
-                      <p className="text-xs font-black text-gray-400 uppercase tracking-widest mb-2">The Challenge</p>
-                      <p className="text-gray-600 font-medium leading-relaxed">{study.challenge}</p>
-                    </div>
-                    <div>
-                      <p className="text-xs font-black text-blue-600 uppercase tracking-widest mb-2">The Result</p>
-                      <p className="text-gray-900 font-bold leading-relaxed text-lg">{study.result}</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+            {t.caseStudies.items.map((study, i) => (
+              <CaseStudyCard key={i} study={study} t={t} lang={lang} />
             ))}
           </div>
         </div>
@@ -331,7 +587,7 @@ const AhmedPortfolio = () => {
       <section id="about" className="py-32 px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: lang === "en" ? -20 : 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="relative"
@@ -344,50 +600,39 @@ const AhmedPortfolio = () => {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="absolute -bottom-10 -right-10 bg-blue-600 text-white p-12 rounded-[2.5rem] shadow-2xl hidden md:block">
+            <div className={`absolute -bottom-10 bg-blue-600 text-white p-12 rounded-[2.5rem] shadow-2xl hidden md:block ${lang === "en" ? "-right-10" : "-left-10"}`}>
               <p className="text-5xl font-black mb-2">8+</p>
-              <p className="text-sm font-bold uppercase tracking-widest opacity-80">Years of Solving <br />Operational Problems</p>
+              <p className="text-sm font-bold uppercase tracking-widest opacity-80">{t.about.experience.split(' ').map((word, i) => <span key={i}>{word} {i === 2 ? <br /> : ""}</span>)}</p>
             </div>
           </motion.div>
           
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: lang === "en" ? 20 : -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-black mb-8 tracking-tight">Focused on Results, <br />Driven by Systems.</h2>
+            <h2 className="text-4xl md:text-5xl font-black mb-8 tracking-tight">{t.about.title}</h2>
             <div className="space-y-8 text-lg text-gray-500 font-medium leading-relaxed">
               <p>
-                I don't just consult; I partner with businesses to build the systems that allow them to scale without chaos. My approach is rooted in practical experience with global giants like Amazon.
+                {t.about.text1}
               </p>
               <p>
-                Whether it's training your team to reach peak performance or restructuring your entire operational workflow, my goal is always the same: <span className="text-gray-900 font-bold underline decoration-blue-600 decoration-4 underline-offset-4">measurable efficiency and sustainable growth.</span>
+                {t.about.text2.split(':').map((part, i) => (
+                  <span key={i}>
+                    {i === 1 ? <span className="text-gray-900 font-bold underline decoration-blue-600 decoration-4 underline-offset-4">{part}</span> : part}
+                    {i === 0 && t.about.text2.includes(':') ? ":" : ""}
+                  </span>
+                ))}
               </p>
               <div className="grid grid-cols-2 gap-6 pt-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
-                    <CheckCircle2 size={14} />
+                {t.about.points.map((point, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                      <CheckCircle2 size={14} />
+                    </div>
+                    <span className="text-gray-900 font-bold">{point}</span>
                   </div>
-                  <span className="text-gray-900 font-bold">Building Systems</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
-                    <CheckCircle2 size={14} />
-                  </div>
-                  <span className="text-gray-900 font-bold">Training Teams</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
-                    <CheckCircle2 size={14} />
-                  </div>
-                  <span className="text-gray-900 font-bold">Solving Problems</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
-                    <CheckCircle2 size={14} />
-                  </div>
-                  <span className="text-gray-900 font-bold">Scaling Growth</span>
-                </div>
+                ))}
               </div>
             </div>
           </motion.div>
@@ -408,10 +653,11 @@ const AhmedPortfolio = () => {
             
             <div className="relative z-10">
               <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tight">
-                Let’s Improve Your <br />Business Together
+                {t.contact.title.split('Together').map((part, i) => <span key={i}>{part} {i === 0 && lang === "en" ? <><br />Together</> : ""}</span>)}
+                {lang === "ar" && t.contact.title}
               </h2>
               <p className="text-gray-400 text-xl mb-12 max-w-2xl mx-auto font-medium">
-                Ready to optimize your operations and scale your team? Let's discuss how we can build a more efficient future for your company.
+                {t.contact.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-6">
                 <a 
@@ -420,13 +666,13 @@ const AhmedPortfolio = () => {
                   rel="noopener noreferrer"
                   className="bg-blue-600 text-white px-12 py-6 rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-2xl shadow-blue-900/20 text-lg"
                 >
-                  Book a Free Consultation
+                  {t.contact.ctaBook}
                 </a>
                 <a 
                   href="mailto:maro.1261981@gmail.com"
                   className="bg-white/5 text-white border border-white/10 px-12 py-6 rounded-2xl font-bold hover:bg-white/10 transition-all text-lg"
                 >
-                  Contact via Email
+                  {t.contact.ctaEmail}
                 </a>
               </div>
             </div>
@@ -438,15 +684,15 @@ const AhmedPortfolio = () => {
       <footer className="py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-center md:text-left">
-            <span className="font-black text-xl tracking-tighter text-blue-600">AHMED AMIR.</span>
-            <p className="text-gray-400 text-sm mt-2 font-medium">Operations Manager & Business Consultant</p>
+            <span className="font-black text-xl tracking-tighter text-blue-600">{t.nav.logo}</span>
+            <p className="text-gray-400 text-sm mt-2 font-medium">{t.footer.description}</p>
           </div>
           <div className="flex gap-10 text-xs font-black uppercase tracking-widest text-gray-400">
             <a href="https://www.linkedin.com/in/cap-amir" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">LinkedIn</a>
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">WhatsApp</a>
             <a href="mailto:maro.1261981@gmail.com" className="hover:text-blue-600 transition-colors">Email</a>
           </div>
-          <p className="text-gray-400 text-xs font-medium">© {new Date().getFullYear()} Ahmed Amir Ahmed.</p>
+          <p className="text-gray-400 text-xs font-medium">{t.footer.rights}</p>
         </div>
       </footer>
     </div>
