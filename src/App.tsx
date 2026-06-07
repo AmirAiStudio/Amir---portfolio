@@ -26,7 +26,14 @@ import {
   Zap,
   MessageSquare,
   Languages,
-  MoreHorizontal
+  MoreHorizontal,
+  Cpu,
+  Code,
+  Palette,
+  BookOpen,
+  Sparkles,
+  Laptop,
+  Play
 } from "lucide-react";
 
 const ServiceCard = ({ service, icon, lang }: any) => {
@@ -301,83 +308,143 @@ const AhmedPortfolio = () => {
         contact: "Contact",
       },
       hero: {
-        badge: "Operations & Business Consultant",
-        headline: "I Help Businesses Build Systems, Train Teams & Scale Operations",
-        subheadline: "Operations Manager & Business Consultant with 8+ years of experience helping companies improve performance, structure operations, and grow efficiently.",
+        badge: "AI, Operations & Digital Transformation Consultant",
+        headline: "Transforming Businesses Through AI, Systems & Innovation",
+        subheadline: "Helping organizations automate workflows, develop management systems, optimize operations, train teams, and scale efficiently through technology and AI.",
         ctaBook: "Book a Consultation",
         ctaWork: "View My Work",
-        efficiency: "Efficiency",
-        growth: "Growth",
-        optimizing: "Optimizing",
-        operations: "Operations"
+        efficiency: "Automation Rate",
+        growth: "Operations Scaled",
+        optimizing: "Systemizing",
+        operations: "Operations & AI"
       },
       clients: {
         title: "Companies I’ve Worked With"
       },
+      whatIDid: "What I Did",
+      whatIDo: {
+        title: "What I Do",
+        subtitle: "Delivering multi-disciplinary expertise at the intersection of AI, technology, operations, and creative strategy.",
+        cards: [
+          {
+            title: "Software & Web Developer",
+            desc: "Building integrated management systems, custom business platforms, and advanced web solutions.",
+            tech: "React • Node.js • Tailored Business Systems • WordPress"
+          },
+          {
+            title: "AI Trainer",
+            desc: "Teaching professionals and teams how to leverage AI effectively in their daily workflows to maximize output.",
+            tech: "Generative AI • ChatGPT • Midjourney • Custom Automation"
+          },
+          {
+            title: "Operations Consultant",
+            desc: "Designing operational systems, KPI structures, and optimizing workflow performance to scale businesses.",
+            tech: "SOP Design • KPI Frameworks • Bottleneck Analysis • Scaling"
+          },
+          {
+            title: "Content Creator",
+            desc: "Founder of Amir AI Studio and creator of educational AI and tech content to inspire modern professionals.",
+            tech: "Amir AI Studio • YouTube • Tech Community Engagement"
+          },
+          {
+            title: "Corporate Trainer",
+            desc: "Training company employees and managers on software and frameworks that improve work efficiency and productivity.",
+            tech: "Corporate Coaching • Workplace Productivity • Software Training"
+          },
+          {
+            title: "Creative Director",
+            desc: "15+ years of experience in visual design, cohesive branding, visual communication and high-impact advertising.",
+            tech: "Brand Identity • Packaging Design • Creative Campaigns"
+          }
+        ]
+      },
       services: {
         title: "What I Can Help You With",
-        subtitle: "Strategic solutions designed to solve operational problems and drive sustainable business growth.",
+        subtitle: "High-impact solutions combining cutting-edge technology, intelligent automation, operational efficiency, and creative identity.",
         items: [
           {
-            title: "Operations Setup & System Building",
-            description: "Building robust operational frameworks from the ground up to ensure your business runs like a well-oiled machine.",
+            title: "AI & Automation",
+            description: "Deploying intelligent AI integrations and custom automations to optimize your workflows and accelerate business operations.",
             details: [
-              "Custom SOPs & Documentation",
+              "AI Integration",
+              "AI Agents",
               "Workflow Automation",
-              "Resource Allocation",
-              "System Integration"
+              "Prompt Engineering"
             ]
           },
           {
-            title: "Team Training (Agents, Leaders, Managers)",
-            description: "Developing high-performing teams through tailored training programs for every level of leadership and staff.",
+            title: "Software Development",
+            description: "Developing robust, fully tailored management systems, business dashboards, and digital products built to scale.",
             details: [
-              "Leadership Workshops",
-              "Soft Skills Training",
-              "Technical Onboarding",
-              "Performance Coaching"
+              "Management Systems",
+              "Business Dashboards",
+              "Web Applications",
+              "WordPress Solutions"
             ]
           },
           {
-            title: "KPI & Performance Management Systems",
-            description: "Implementing data-driven systems to track, analyze, and improve performance across all business units.",
+            title: "Operations Excellence",
+            description: "Restructuring business processes, creating data-driven KPI dashboards, and training your team to scale without friction.",
             details: [
-              "Dashboard Creation",
-              "Data Analysis",
-              "Incentive Programs",
-              "Real-time Reporting"
+              "Process Optimization",
+              "KPI Frameworks",
+              "Team Management",
+              "Performance Systems"
             ]
           },
           {
-            title: "Customer Support Optimization",
-            description: "Streamlining support workflows and tools (Zendesk, HubSpot) to deliver exceptional customer experiences.",
+            title: "Corporate Training",
+            description: "Providing interactive training and workshops for corporate staff and executives on critical digital tools and workflows to boost daily efficiency.",
             details: [
-              "Tool Configuration",
-              "Response Time Reduction",
-              "Quality Assurance",
-              "CSAT/NPS Improvement"
+              "Employee Onboarding",
+              "Management Training",
+              "Workplace Productivity",
+              "Software & Tool Mastery"
             ]
           },
           {
-            title: "Business Process Improvement",
-            description: "Identifying bottlenecks and optimizing workflows to increase efficiency and reduce operational costs.",
+            title: "AI Training",
+            description: "Tailored educational programs and workshops for companies, professionals, and teams to master generative AI.",
             details: [
-              "Lean Methodology",
-              "Cost Reduction",
-              "Bottleneck Analysis",
-              "Change Management"
+              "Corporate AI Training",
+              "AI Workshops",
+              "AI Courses"
+            ]
+          },
+          {
+            title: "Branding & Design",
+            description: "Leveraging 15+ years of visual communication experience to craft memorable, market-winning brand identities and assets.",
+            details: [
+              "Brand Identity",
+              "Packaging Design",
+              "Marketing Materials"
             ]
           }
         ]
       },
       caseStudies: {
         title: "Case Studies",
-        subtitle: "Real-world examples of operational excellence and business transformation.",
+        subtitle: "Real-world examples of system builders in action and business transformation.",
         challenge: "The Challenge",
         result: "The Result",
         whatIDid: "What I Did",
         cta: "Want similar results? Let's talk",
         items: [
+          {
+            title: "Integrated Operations Management System",
+            challenge: "A fire safety and firefighting equipment company struggled with disconnected communication between departments, field engineers, installation projects, maintenance contracts, supply operations, and client follow-ups.",
+            result: "Built a centralized management system that connected all departments, streamlined communication, tracked installations, maintenance contracts, supply orders, field visits, and engineer activities in one integrated platform.",
+            tags: ["Management System", "Operations", "Automation"],
+            actions: [
+              "Designed a complete management workflow",
+              "Connected internal departments through one system",
+              "Tracked installation and maintenance contracts",
+              "Managed field engineer activities and site visits",
+              "Centralized supplier and procurement processes",
+              "Improved communication and reporting accuracy",
+              "Reduced operational delays and information gaps"
+            ]
+          },
           {
             title: "Call Center Performance Transformation",
             challenge: "Low efficiency and inconsistent service quality in a high-pressure environment.",
@@ -418,11 +485,11 @@ const AhmedPortfolio = () => {
         ]
       },
       about: {
-        title: "Focused on Results, Driven by Systems.",
-        text1: "I don't just consult; I partner with businesses to build the systems that allow them to scale without chaos. My approach is rooted in practical experience with global giants like Amazon.",
-        text2: "Whether it's training your team to reach peak performance or restructuring your entire operational workflow, my goal is always the same: measurable efficiency and sustainable growth.",
-        points: ["Building Systems", "Training Teams", "Solving Problems", "Scaling Growth"],
-        experience: "Years of Solving Operational Problems"
+        title: "From Design to AI, From Operations to Innovation",
+        text1: "With more than 15 years of experience across design, branding, software development, operations management, and AI solutions, I help organizations build smarter systems, automate workflows, train teams, and scale sustainably.",
+        text2: "As the founder of Amir AI Studio, I create educational content, train professionals in AI technologies, and develop digital solutions that drive measurable business growth.",
+        points: ["Smarter Systems", "Workflow Automation", "AI Integration", "Sustainable Scaling"],
+        experience: "Years of Multi-Disciplinary Excellence"
       },
       contact: {
         title: "Let’s Improve Your Business Together",
@@ -431,7 +498,7 @@ const AhmedPortfolio = () => {
         ctaEmail: "Contact via Email"
       },
       footer: {
-        description: "Operations Manager & Business Consultant",
+        description: "AI Consultant • Software Developer • Operations Strategist • Founder of Amir AI Studio",
         rights: "© 2026 Ahmed Amir Ahmed."
       }
     },
@@ -444,190 +511,255 @@ const AhmedPortfolio = () => {
         contact: "تواصل معي",
       },
       hero: {
-        badge: "مستشار عمليات وأعمال",
-        headline: "أساعد الشركات على بناء الأنظمة، تدريب الفرق وتوسيع العمليات",
-        subheadline: "مدير عمليات ومستشار أعمال بخبرة تزيد عن 8 سنوات في مساعدة الشركات على تحسين الأداء وهيكلة العمليات والنمو بكفاءة.",
+        badge: "مستشار الذكاء الاصطناعي والعمليات والتحول الرقمي",
+        headline: "تحويل الأعمال من خلال الذكاء الاصطناعي والأنظمة والابتكار",
+        subheadline: "أساعد المؤسسات على أتمتة خطوط العمل، وتطوير أنظمة الإدارة والتحكم التشغيلي، ودمج أدوات الذكاء الاصطناعي التوليدي، وتدريب الفرق لضمان نموها بسلاسة وكفاءة.",
         ctaBook: "احجز استشارة",
         ctaWork: "عرض أعمالي",
-        efficiency: "الكفاءة",
-        growth: "النمو",
-        optimizing: "تحسين",
-        operations: "العمليات"
+        efficiency: "معدل الأتمتة",
+        growth: "توسيع العمليات",
+        optimizing: "منهجية وهيكلة",
+        operations: "العمليات والذكاء"
       },
       clients: {
-        title: "شركات عملت معها"
+        title: "شركات وبنوك عملت معها"
+      },
+      whatIDid: "ماذا فعلت",
+      whatIDo: {
+        title: "مجالات عملي وخبرتي",
+        subtitle: "أقدم خدمات متكاملة تدمج بين الذكاء الاصطناعي، التكنولوجيا، هندسة العمليات، والإبداع الفني كصانع ومؤسس حلول.",
+        cards: [
+          {
+            title: "مطور برمجيات وويب",
+            desc: "بناء أنظمة إدارة العمليات المخصصة، ومنصات الأعمال المتطورة، وحلول تطبيقات الويب الذكية.",
+            tech: "React • Node.js • أنظمة الإدارة المخصصة • ووردبريس"
+          },
+          {
+            title: "مدرب ذكاء اصطناعي",
+            desc: "تدريب المحترفين والمؤسسات والفرق على كيفية الاستفادة من أدوات الذكاء الاصطناعي التوليدي والعمل الإبداعي اليومي لزيادة الإنتاجية.",
+            tech: "الذكاء الاصطناعي التوليدي • ChatGPT • هندسة الأوامر"
+          },
+          {
+            title: "مستشار ومخطط عمليات تشغيلية",
+            desc: "تصميم النظم التشغيلية، وصياغة مؤشرات قياس الأداء (KPIs)، وتبسيط وتعديل مسارات العمل لزيادة العوائد والأرباح.",
+            tech: "هيكلة SOP • رصد KPI • إزالة العقبات في خطوط الأعمال • التوسع"
+          },
+          {
+            title: "صانع محتوى تعليمي",
+            desc: "مؤسس Amir AI Studio للتوعية والتدريب التقني، وصانع محتوى تعليمي ذكي لتبسيط الذكاء الاصطناعي للمجتمع العربي.",
+            tech: "Amir AI Studio • صناعة المحتوى • تبسيط التكنولوجيا للجميع"
+          },
+          {
+            title: "مدرب شركات ومؤسسات",
+            desc: "تدريب موظفي الشركات والمديرين على البرامج والأدوات الرقمية التي تحسن مستوى العمل وترفع الإنتاجية اليومية والأداء العام.",
+            tech: "تدريب الموظفين • كفاءة الإنتاجية • برامج وتطبيقات الأعمال"
+          },
+          {
+            title: "مدير إبداعي وفني",
+            desc: "أكثر من 15 عاماً من الخبرة في بناء العلامات التجارية والهوية البصرية المتكاملة وتصميم وتخطيط الحملات الإعلانية المبتكرة.",
+            tech: "العلامات التجارية • تصميم أغلفة المنتجات • الإعلانات المبتكرة"
+          }
+        ]
       },
       services: {
-        title: "كيف يمكنني مساعدتك",
-        subtitle: "حلول استراتيجية مصممة لحل المشكلات التشغيلية ودفع نمو الأعمال المستدام.",
+        title: "الخدمات التي أقدمها",
+        subtitle: "حلول رقمية وتشغيلية متكاملة مصممة خصيصاً لمساعدة الشركات على تحقيق الكفاءة والابتكار والنمو المستدام.",
         items: [
           {
-            title: "إعداد العمليات وبناء الأنظمة",
-            description: "بناء أطر عمل تشغيلية قوية من الألف إلى الياء لضمان سير عمل عملك بسلاسة تامة.",
+            title: "الذكاء الاصطناعي والأتمتة",
+            description: "تطبيق أدوات الذكاء الاصطناعي وبناء الأتمتة الذكية لرفع كفاءة سير العمل وتسريع عمليات الأعمال اليومية.",
             details: [
-              "إجراءات التشغيل القياسية (SOPs)",
-              "أتمتة سير العمل",
-              "تخصيص الموارد",
-              "تكامل الأنظمة"
+              "دمج الذكاء الاصطناعي",
+              "وكلاء الذكاء الاصطناعي الذاتية",
+              "أتمتة سير العمل والمهمات",
+              "هندسة الأوامر الرقمية"
             ]
           },
           {
-            title: "تدريب الفرق (وكلاء، قادة، مديرين)",
-            description: "تطوير فرق عالية الأداء من خلال برامج تدريبية مخصصة لكل مستوى من مستويات القيادة والموظفين.",
+            title: "تطوير البرمجيات والويب",
+            description: "تطوير برمجيات الأعمال القوية وأنظمة الإدارة المخصصة بالكامل ولوحات البيانات التي تدعم قراراتك وتنمي أعمالك الكبيرة.",
             details: [
-              "ورش عمل قيادية",
-              "تدريب المهارات الناعمة",
-              "التدريب التقني",
-              "التدريب على الأداء"
+              "أنظمة الإدارة والتحكم",
+              "لوحات تحكم الأعمال",
+              "تطبيقات الويب الحديثة",
+              "حلول ووردبريس وحلول مخصصة"
             ]
           },
           {
-            title: "أنظمة إدارة الأداء والمؤشرات الرئيسية",
-            description: "تنفيذ أنظمة قائمة على البيانات لتتبع وتحليل وتحسين الأداء عبر جميع وحدات العمل.",
+            title: "التميز التشغيلي والهندسة العملياتية",
+            description: "إعادة هيكلة وحوكمة عمليات الأعمال، وبناء مؤشرات قياس الأداء (KPIs)، وتوجيه الفرق لتحقيق أعلى درجات الكفاءة التشغيلية.",
             details: [
-              "إنشاء لوحات التحكم",
-              "تحليل البيانات",
-              "برامج التحفيز",
-              "التقارير الفورية"
+              "تحسين وتبسيط العمليات",
+              "أطر عمل مؤشرات الأداء",
+              "إدارة وتطوير مهارات الفرق",
+              "أنظمة تقييم ومتابعة الأداء"
             ]
           },
           {
-            title: "تحسين دعم العملاء",
-            description: "تبسيط سير عمل الدعم والأدوات (Zendesk، HubSpot) لتقديم تجارب استثنائية للعملاء.",
+            title: "تدريب الشركات والمؤسسات",
+            description: "إعداد وتقديم حقائب تدريبية تفاعلية لتأهيل موظفي الشركات والمديرين التنفيذيين على البرامج التقنية ومنهجيات تزيد كفاءة وجودة العمل اليومي.",
             details: [
-              "إعداد الأدوات",
-              "تقليل وقت الاستجابة",
-              "ضمان الجودة",
-              "تحسين رضا العملاء"
+              "تأهيل الموظفين الجدد",
+              "تدريب الكوادر والمديرين",
+              "مقاومة الهدر في الإنتاجية",
+              "إتقان برامج وتطبيقات العمل"
             ]
           },
           {
-            title: "تحسين العمليات التجارية",
-            description: "تحديد الاختناقات وتحسين سير العمل لزيادة الكفاءة وتقليل التكاليف التشغيلية.",
+            title: "التدريب على الذكاء الاصطناعي",
+            description: "برامج تعليمية وورش عمل مخصصة للشركات والمحترفين لتمكينهم من أدوات الذكاء الاصطناعي التوليدي ومهمات العمل اليومية.",
             details: [
-              "منهجية Lean",
-              "تقليل التكاليف",
-              "تحليل الاختناقات",
-              "إدارة التغيير"
+              "تدريب الشركات على الذكاء الاصطناعي",
+              "ورش العمل المتخصصة",
+              "مساقات وكورسات الذكاء الاصطناعي"
+            ]
+          },
+          {
+            title: "الهوية والتصميم الإبداعي",
+            description: "نستفيد من خبرة تزيد عن 15 عاماً في الاتصال البصري والغرافيك لنصنع لشركتك هوية تجارية مميزة تكسب السوق وعقول العملاء.",
+            details: [
+              "بناء الهوية البصرية المتكاملة",
+              "تصميم منتجات وتغليف فاخر",
+              "المواد والمطبوعات الدعائية والتسويقية"
             ]
           }
         ]
       },
       caseStudies: {
-        title: "دراسات حالة",
-        subtitle: "أمثلة واقعية للتميز التشغيلي وتحول الأعمال.",
-        challenge: "التحدي",
-        result: "النتيجة",
-        whatIDid: "ماذا فعلت",
-        cta: "هل تريد نتائج مماثلة؟ دعنا نتحدث",
+        title: "دراسات حالة من واقع العمل",
+        subtitle: "أمثلة حية لأنظمة برمجية وتطوير عمليات تشغيلية قمت ببنائها وحققت نجاحاً تشغيلياً كبيراً.",
+        challenge: "التحدي التشغيلي",
+        result: "النتيجة والأثر",
+        whatIDid: "ما قمت به بالتفصيل",
+        cta: "تريد تحقيق نتائج مماثلة؟ تواصل معي اليوم",
         items: [
           {
+            title: "نظام متكامل لإدارة العمليات التشغيلية",
+            challenge: "كانت إحدى شركات معدات مكافحة الحرائق والسلامة تعاني من تشتت الاتصال والبيانات بين الإدارات المختلفة، والمهندسين الميدانيين، ومشاريع التركيب، وعقود الصيانة، وعمليات التوريد، ومتابعة العملاء.",
+            result: "تم بناء نظام إدارة مركزي يربط جميع الإدارات، ويبسط الاتصالات، ويتتبع التركيبات وعقود الصيانة، وأوامر التوريد، والزيارات الميدانية، وأنشطة المهندسين في منصة واحدة متكاملة.",
+            tags: ["نظام إدارة", "عمليات تشغيلية", "أتمتة الأنظمة"],
+            actions: [
+              "تصميم وتوثيق هيكل خطط العمل التشغيلية بالكامل",
+              "ربط الإدارات الداخلية من خلال نظام موحد مستند للويب",
+              "تتبع عقود التركيبات والصيانة الدورية للعملاء بدقة فائقة",
+              "إدارة وتنسيق زيارات مهندسي الميدان وجدولة تحركاتهم",
+              "مركزية عمليات التوريد والشراء والتحكم في المخازن لسرعة الإمداد",
+              "تحسين تدفق التواصل والتقارير بدقة وسرعة عالية",
+              "تقليص فترات التأخير التشغيلية وفجوات المعلومات في المنشأة"
+            ]
+          },
+          {
             title: "تحول أداء مركز الاتصال",
-            challenge: "كفاءة منخفضة وجودة خدمة غير متسقة في بيئة عالية الضغط.",
-            result: "تحسين أداء الفريق من خلال إعادة هيكلة سير العمل وتنفيذ نظام مخصص لتتبع مؤشرات الأداء.",
+            challenge: "كفاءة منخفضة وجودة خدمة غير متسقة في بيئة عالية الضغط التشغيلي وعمليات معقدة.",
+            result: "تحسين أداء الفريق من خلال إعادة هيكلة سير العمل وتنفيذ نظام مخصص لتتبع مؤشرات الأداء والإنتاجية.",
             tags: ["العمليات", "مؤشرات الأداء", "التدريب"],
             actions: [
-              "إعادة تصميم سير العمل لتحقيق الكفاءة",
-              "بناء نظام تتبع مؤشرات الأداء",
-              "تحسين هيكل الفريق",
-              "تعزيز اتساق الخدمة"
+              "إعادة تصميم سير العمل لتحقيق الفاعلية التشغيلية وقصر زمن الاستجابة",
+              "بناء نظام لتتبع مؤشرات الأداء الحيوية والتقارير الرقمية",
+              "تحسين هيكل الفريق وتوزيع الأدوار والمسؤوليات بوضوح",
+              "تعزيز اتساق وجودة الخدمة المقدمة للعملاء ورفع رضاهم"
             ]
           },
           {
             title: "إطار قابلية التوسع للشركات الناشئة",
-            challenge: "افتقرت شركة ناشئة سريعة النمو إلى الهيكل اللازم للتعامل مع الطلب المتزايد.",
-            result: "بناء نظام تشغيلي كامل، وتحسين التنظيم وتوفير مسار واضح لقابلية التوسع.",
+            challenge: "افتقرت شركة ناشئة سريعة النمو إلى الهيكل والآليات والأنظمة اللاحة للتعامل مع الطلب المتزايد.",
+            result: "بناء نظام تشغيلي كامل، وتحسين التنظيم وتوفير مسار واضح ومستدام لقابلية التوسع دون فوضى.",
             tags: ["بناء الأنظمة", "التوسع", "العمليات"],
             actions: [
-              "بناء نظام تشغيلي كامل",
-              "تحديد سير العمل والمسؤوليات",
-              "إنشاء هيكل قابل للتوسع",
-              "تحسين التنفيذ والتنظيم"
+              "بناء نظام تشغيلي متكامل يدعم النمو والتطور السريع للحجم",
+              "تحديد قنوات سير العمل وتفصيل المسؤوليات وتنسيق المهام للأقسام",
+              "إنشاء هيكل تنظيمي قابل للتوسع والتمكين الرقمي الفوري والفعال",
+              "تحسين تنفيذ وسرعة عمليات المؤسسة بأعلى درجات الموثوقية"
             ]
           },
           {
             title: "تحول نظام إدارة المدارس",
-            challenge: "واجهت المدرسة تحديات إدارية كبرى، بما في ذلك سوء التنظيم، ونقص تتبع البيانات الواضح، وصعوبة إدارة الطلاب والموظفين والعمليات اليومية.",
-            result: "تحويل عمليات المدرسة من خلال بناء نظام إدارة مخصص بالكامل، مما أتاح تحكماً وتقارير وقدرة أفضل على اتخاذ القرار.",
+            challenge: "واجهت إحدى المدرسة تحديات إدارية وتشغيلية كبرى، بما في ذلك سوء التنظيم ونقص تتبع البيانات لإشراك أولياء الأمور.",
+            result: "تحويل عمليات المدرسة من خلال بناء نظام إدارة مخصص بالكامل، مما أتاح سلاسة اتخاد القرار وإشراك الطلاب.",
             tags: ["التعليم", "بناء الأنظمة", "الإدارة"],
             actions: [
-              "تصميم نظام إدارة مدرسي (SMS) مخصص بالكامل",
-              "تنظيم بيانات الطلاب والموظفين في نظام مهيكل",
-              "بناء لوحات تقارير",
-              "تبسيط سير العمل والعمليات اليومية",
-              "تحسين الرؤية واتخاذ القرار"
+              "تصميم نظام إدارة مدرسي (SMS) مخصص بالكامل بمواصفات تقنية حديثة",
+              "تنظيم بيانات الطلاب والموظفين والشؤون المالية في نظام مركزي ذكي",
+              "بناء لوحات تحكم ديناميكية لتقارير الإدارة والمتابعة التشغيلية",
+              "تبسيط سير العمل والعمليات اليومية لتسهيل التعليم والاتصال المشترك",
+              "تحسين الرؤية واتخاذ القرار الفوري بالارتكاز على إحصاءات حية"
             ]
           }
         ]
       },
       about: {
-        title: "التركيز على النتائج، مدفوع بالأنظمة.",
-        text1: "أنا لا أقدم الاستشارات فحسب؛ بل أشارك الشركات في بناء الأنظمة التي تسمح لها بالتوسع دون فوضى. نهجي متجذر في الخبرة العملية مع عمالقة عالميين مثل أمازون.",
-        text2: "سواء كان الأمر يتعلق بتدريب فريقك للوصول إلى ذروة الأداء أو إعادة هيكلة سير العمل التشغيلي بالكامل، فإن هدفي هو نفسه دائماً: كفاءة قابلة للقياس ونمو مستدام.",
-        points: ["بناء الأنظمة", "تدريب الفرق", "حل المشكلات", "توسيع النمو"],
-        experience: "سنوات من حل المشكلات التشغيلية"
+        title: "من التصميم الفني إلى هندسة الذكاء والعمليات",
+        text1: "مع أكثر من 15 عاماً من الخبرة المتكاملة في حقول التصميم البصري، بناء الهوية، وتطوير البرمجيات، وإدارة العمليات، وحلول الذكاء الاصطناعي، أساعد الشركات على دمج التكنولوجيا الحيوية لبناء أنظمة غاية في الدقة تعمل بمثابة العقل المفكر.",
+        text2: "بصفتي مؤسساً لمنصة Amir AI Studio المتخصصة بالتوعية والتدريب التقني، أركز على صناعة محتوى تعليمي في حقول الذكاء الاصطناعي، وتدريب المحترفين والشركات، وتطوير الأدوات التي تحقق الكفاءة وتحافظ على وتيرة نمو مستدامة للأعمال.",
+        points: ["أنظمة ذكية بالكامل", "أتمتة خطوط العمل", "تطبيقات مخصصة", "توسع ونمو تشغيلي"],
+        experience: "عاماً من التميز الفني والتقني"
       },
       contact: {
-        title: "دعنا نحسن عملك معاً",
-        subtitle: "هل أنت مستعد لتحسين عملياتك وتوسيع فريقك؟ دعنا نناقش كيف يمكننا بناء مستقبل أكثر كفاءة لشركتك.",
-        ctaBook: "احجز استشارة",
-        ctaEmail: "تواصل عبر البريد"
+        title: "دعنا نصنع المستقبل ونطور عملك معاً",
+        subtitle: "جاهز لتسليح شركتك بأنظمة الذكاء الاصطناعي المتقدمة وأتمتة العمليات؟ دعنا نناقش كيف يمكننا هندسة وبناء مستقبل متميز من الكفاءة لشركتك.",
+        ctaBook: "احجز جلستك الاستشارية",
+        ctaEmail: "تواصل عبر البريد الإلكتروني"
       },
       footer: {
-        description: "مدير عمليات ومستشار أعمال",
-        rights: "© 2026 أحمد أمير أحمد. جميع الحقوق محفوظة."
+        description: "مستشار ذكاء اصطناعي • مطور برمجيات • مخطط عمليات استراتيجي • مؤسس Amir AI Studio",
+        rights: "© 2026 أحمد أمير أحمد. جميع الحقوق محفوظة لـه."
       }
     }
   };
 
   const t = translations[lang];
-  const whatsappLink = "https://wa.me/201211111111";
-  const clients = ["Amazon", "Vodafone", "Etisalat", "Orange", "B.TECH", "Raya"];
+  const whatsappLink = "https://wa.me/201090123456";
+  const clients = ["Amazon", "Vodafone", "Etisalat", "B.TECH", "Connect Squad", "Smart Solution"];
   const servicesIcons = [
-    <Settings className="text-blue-600" size={32} />,
-    <Users className="text-blue-600" size={32} />,
+    <Cpu className="text-blue-600" size={32} />,
+    <Code className="text-blue-600" size={32} />,
     <BarChart3 className="text-blue-600" size={32} />,
-    <MessageSquare className="text-blue-600" size={32} />,
-    <TrendingUp className="text-blue-600" size={32} />
+    <Users className="text-blue-600" size={32} />,
+    <BookOpen className="text-blue-600" size={32} />,
+    <Palette className="text-blue-600" size={32} />
   ];
 
   const toggleLang = () => {
-    setLang(prev => prev === "en" ? "ar" : "en");
+    setLang(lang === "en" ? "ar" : "en");
+    setCurrentSlide(0);
   };
 
   return (
-    <div className={`min-h-screen bg-[#fcfcfc] text-[#1a1a1a] font-sans selection:bg-blue-100 ${lang === "ar" ? "font-arabic" : ""}`} dir={lang === "ar" ? "rtl" : "ltr"}>
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <a 
-            href="#" 
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="font-black text-2xl tracking-tighter text-blue-600 hover:opacity-80 transition-opacity"
-          >
+    <div className={`min-h-screen bg-white text-gray-900 selection:bg-blue-600 selection:text-white ${lang === "ar" ? "rtl" : "ltr"}`} style={{ direction: lang === "ar" ? "rtl" : "ltr" }}>
+      {/* Navbar Container */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/75 backdrop-blur-xl border-b border-gray-50" dir="ltr">
+        <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+          <span className="font-black text-2xl tracking-tighter text-blue-600 select-none">
             {t.nav.logo}
-          </a>
-          <div className="hidden md:flex gap-10 text-sm font-bold text-gray-500 uppercase tracking-widest">
+          </span>
+          <nav className="hidden md:flex items-center gap-10 text-xs font-black uppercase tracking-widest text-gray-400">
             <a href="#services" className="hover:text-blue-600 transition-colors">{t.nav.services}</a>
             <a href="#case-studies" className="hover:text-blue-600 transition-colors">{t.nav.caseStudies}</a>
             <a href="#about" className="hover:text-blue-600 transition-colors">{t.nav.about}</a>
             <a href="#contact" className="hover:text-blue-600 transition-colors">{t.nav.contact}</a>
+          </nav>
+          <div className="flex items-center gap-6">
+            <button 
+              onClick={toggleLang} 
+              className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center text-gray-500 hover:border-blue-600 hover:text-blue-600 transition-all cursor-pointer shadow-sm"
+              title={lang === "en" ? "Translate to Arabic" : "ترجمة إلى الإنجليزية"}
+            >
+              <Languages size={18} />
+            </button>
+            <a 
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 text-white px-6 py-3.5 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-blue-700 transition-all shadow-md hover:shadow-lg"
+            >
+              {lang === "en" ? "Get in touch" : "ابدأ بالتواصل"}
+            </a>
           </div>
-          <button 
-            onClick={toggleLang}
-            className="flex items-center gap-2 bg-gray-50 text-gray-900 px-4 py-2 rounded-xl text-sm font-bold hover:bg-gray-100 transition-all border border-gray-100"
-          >
-            <Languages size={18} className="text-blue-600" />
-            {lang === "en" ? "العربية" : "English"}
-          </button>
         </div>
-      </nav>
+      </header>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-40 px-6 overflow-hidden">
+      <section id="hero" className="pt-44 pb-32 px-6 overflow-hidden relative">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none opacity-[0.02]">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:60px_60px]"></div>
         </div>
@@ -638,17 +770,13 @@ const AhmedPortfolio = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <span className="inline-block px-5 py-2 bg-blue-50 text-blue-700 rounded-xl text-[10px] font-black uppercase tracking-[0.3em] mb-10 border border-blue-100/50 shadow-sm">
+            <span className="inline-block px-5 py-2 bg-blue-50 text-blue-700 rounded-xl text-[10px] font-black uppercase tracking-[0.2em] mb-10 border border-blue-100/50 shadow-sm">
               {t.hero.badge}
             </span>
-            <h1 className="text-6xl md:text-8xl font-black leading-[0.95] mb-10 tracking-tighter text-gray-900">
-              {t.hero.headline.split(',').map((part, i) => (
-                <span key={i} className="block">
-                  {i === 1 ? <span className="text-blue-600">{part}</span> : part}
-                </span>
-              ))}
+            <h1 className="text-5xl md:text-7xl font-black leading-[1.05] mb-10 tracking-tighter text-gray-900">
+              {t.hero.headline}
             </h1>
-            <p className="text-2xl text-gray-500 leading-relaxed mb-14 max-w-2xl font-medium opacity-80">
+            <p className="text-xl md:text-2xl text-gray-500 leading-relaxed mb-14 max-w-2xl font-medium opacity-80">
               {t.hero.subheadline}
             </p>
             <div className="flex flex-wrap gap-6">
@@ -656,13 +784,13 @@ const AhmedPortfolio = () => {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-600 text-white px-12 py-6 rounded-[2rem] font-black hover:bg-blue-700 transition-all shadow-[0_20px_50px_rgba(37,99,235,0.3)] flex items-center gap-4 text-lg uppercase tracking-widest"
+                className="bg-blue-600 text-white px-12 py-6 rounded-[2rem] font-black hover:bg-blue-700 transition-all shadow-[0_20px_50px_rgba(37,99,235,0.3)] flex items-center gap-4 text-base uppercase tracking-widest"
               >
-                {t.hero.ctaBook} <ChevronRight size={22} className={lang === "ar" ? "rotate-180" : ""} />
+                {t.hero.ctaBook} <ChevronRight size={20} className={lang === "ar" ? "rotate-180" : ""} />
               </a>
               <a 
                 href="#case-studies"
-                className="bg-white text-gray-900 border-2 border-gray-100 px-12 py-6 rounded-[2rem] font-black hover:border-blue-600 hover:text-blue-600 transition-all flex items-center gap-4 text-lg uppercase tracking-widest"
+                className="bg-white text-gray-900 border-2 border-gray-100 px-12 py-6 rounded-[2rem] font-black hover:border-blue-600 hover:text-blue-600 transition-all flex items-center gap-4 text-base uppercase tracking-widest"
               >
                 {t.hero.ctaWork}
               </a>
@@ -670,52 +798,203 @@ const AhmedPortfolio = () => {
           </motion.div>
           
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.95, y: 30 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
             className="relative hidden lg:block"
           >
-            <div className="aspect-[4/5.5] rounded-[4rem] overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.1)] bg-[#0a0a0a] p-16 flex flex-col justify-center relative border border-white/5">
-              <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
-                <div className="absolute top-20 left-20 w-40 h-40 border border-blue-500/30 rounded-full blur-sm"></div>
-                <div className="absolute bottom-40 right-20 w-80 h-80 border border-indigo-500/20 rounded-full blur-md"></div>
+            {/* Ambient AI Glow background */}
+            <div className="absolute -inset-4 bg-gradient-to-tr from-blue-500/10 via-indigo-500/5 to-cyan-500/10 rounded-[4.5rem] blur-2xl opacity-70 pointer-events-none animate-pulse duration-[8s]" />
+            
+            <div className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-[0_50px_100px_rgba(37,99,235,0.12)] bg-[#0c1222] relative border border-blue-500/10">
+              {/* Technical background elements */}
+              <div className="absolute inset-0 opacity-15 pointer-events-none">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 border-2 border-dashed border-blue-400 rounded-full animate-spin [animation-duration:40s]"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 border border-blue-500/30 rounded-full"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] border border-cyan-400/20 rounded-full animate-spin [animation-duration:60s] reverse"></div>
               </div>
-              <div className="relative z-10 space-y-12">
-                <div className="w-28 h-28 bg-blue-600/20 backdrop-blur-2xl rounded-[2.5rem] flex items-center justify-center border border-white/10 shadow-2xl">
-                  <TrendingUp size={56} className="text-blue-400" />
+              
+              {/* Actual Consultant Image with referral policy and soft blend */}
+              <img 
+                src="https://res.cloudinary.com/deuwh0ysg/image/upload/v1780799105/Gemini_Generated_Image_aodtozaodtozaodt_zmhses.png" 
+                alt="Ahmed Amir - AI & Operations Consultant"
+                className="w-full h-full object-cover relative z-10 select-none transition-all duration-700 hover:scale-105"
+                referrerPolicy="no-referrer"
+              />
+
+              {/* Soft edge bottom fade & top ambient lights */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0c1222] via-transparent to-transparent opacity-80 z-20 pointer-events-none" />
+              <div className="absolute bottom-6 left-6 right-6 bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-6 z-30 flex items-center justify-between shadow-lg">
+                <div className="flex items-center gap-3">
+                  <div className="w-4 h-4 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="text-white font-black text-xs tracking-widest uppercase">
+                    {lang === "en" ? "Available for consulting" : "متاح للمشاريع والاستشارات"}
+                  </span>
                 </div>
-                <div className="space-y-6">
-                  <h3 className="text-5xl font-black text-white leading-[1.1] tracking-tight">
-                    {t.hero.optimizing} <br />
-                    <span className="text-blue-500">{t.hero.operations}</span>
-                  </h3>
-                  <div className="flex gap-3">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div key={i} className="h-2 w-12 bg-white/5 rounded-full overflow-hidden">
-                        <motion.div 
-                          animate={{ x: ["-100%", "100%"] }}
-                          transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.3 }}
-                          className="h-full w-full bg-blue-500"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="p-8 bg-white/5 rounded-[2rem] border border-white/10 backdrop-blur-md">
-                    <p className="text-[10px] font-black text-blue-400 uppercase tracking-[0.3em] mb-3">{t.hero.efficiency}</p>
-                    <p className="text-4xl font-black text-white">98%</p>
-                  </div>
-                  <div className="p-8 bg-white/5 rounded-[2rem] border border-white/10 backdrop-blur-md">
-                    <p className="text-[10px] font-black text-blue-400 uppercase tracking-[0.3em] mb-3">{t.hero.growth}</p>
-                    <p className="text-4xl font-black text-white">+24%</p>
-                  </div>
+                <div className="flex items-center gap-1.5 text-blue-400">
+                  <Sparkles size={14} className="animate-spin" style={{ animationDuration: '6s' }} />
+                  <span className="text-[10px] font-black tracking-widest uppercase text-cyan-300">
+                    {lang === "en" ? "AI POWERED" : "مدعوم بالذكاء"}
+                  </span>
                 </div>
               </div>
             </div>
+            
+            {/* Overlap subtle tech metrics for professional consulting flavor */}
+            <motion.div 
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -right-12 top-1/4 p-6 bg-[#0c1222]/90 border border-blue-500/20 backdrop-blur-xl rounded-3xl hidden xl:block shadow-2xl z-30"
+            >
+              <p className="text-[9px] font-black text-cyan-400 uppercase tracking-widest mb-1">{t.hero.efficiency}</p>
+              <p className="text-2xl font-black text-white">95%+</p>
+            </motion.div>
+
+            <motion.div 
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute -left-12 bottom-1/4 p-6 bg-[#0c1222]/90 border border-indigo-500/20 backdrop-blur-xl rounded-3xl hidden xl:block shadow-2xl z-30"
+            >
+              <p className="text-[9px] font-black text-indigo-400 uppercase tracking-widest mb-1">{t.hero.growth}</p>
+              <p className="text-2xl font-black text-white">150%+</p>
+            </motion.div>
           </motion.div>
         </div>
       </section>
+
+      {/* What I Do Section (New) */}
+      <section id="what-i-do" className="py-32 px-6 bg-gradient-to-b from-[#fcfcfc] to-white relative overflow-hidden border-b border-gray-100">
+        <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-50/50 rounded-full blur-[100px] pointer-events-none" />
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-24"
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50/80 text-blue-700 rounded-full text-xs font-black uppercase tracking-widest border border-blue-100/50 mb-6 shadow-sm">
+              <Sparkles size={12} className="text-blue-600 animate-pulse" />
+              {lang === "en" ? "Multidisciplinary Approach" : "نموذج عمل متكامل"}
+            </span>
+            <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight text-gray-900">{t.whatIDo.title}</h2>
+            <p className="text-gray-500 max-w-2xl mx-auto text-lg font-medium leading-relaxed">
+              {t.whatIDo.subtitle}
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Card 1: Software & Web Developer */}
+            <motion.div 
+              whileHover={{ y: -8 }}
+              className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.01)] hover:shadow-[0_20px_60px_rgba(59,130,246,0.06)] hover:border-blue-100 transition-all flex flex-col relative overflow-hidden group"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-500/5 rounded-bl-[50px] pointer-events-none group-hover:scale-110 transition-transform" />
+              <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                <Code size={28} />
+              </div>
+              <h3 className="text-2xl font-black mb-4 text-gray-900">{t.whatIDo.cards[0].title}</h3>
+              <p className="text-gray-500 leading-relaxed font-medium mb-8 flex-grow">
+                {t.whatIDo.cards[0].desc}
+              </p>
+              <div className="text-[11px] font-black text-blue-600 tracking-wider uppercase bg-blue-50/50 px-4 py-2 rounded-xl border border-blue-100/20 w-fit">
+                {t.whatIDo.cards[0].tech}
+              </div>
+            </motion.div>
+
+            {/* Card 2: AI Trainer */}
+            <motion.div 
+              whileHover={{ y: -8 }}
+              className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.01)] hover:shadow-[0_20px_60px_rgba(59,130,246,0.06)] hover:border-blue-100 transition-all flex flex-col relative overflow-hidden group"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-bl-[50px] pointer-events-none group-hover:scale-110 transition-transform" />
+              <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                <BookOpen size={28} />
+              </div>
+              <h3 className="text-2xl font-black mb-4 text-gray-900">{t.whatIDo.cards[1].title}</h3>
+              <p className="text-gray-500 leading-relaxed font-medium mb-8 flex-grow">
+                {t.whatIDo.cards[1].desc}
+              </p>
+              <div className="text-[11px] font-black text-blue-600 tracking-wider uppercase bg-blue-50/50 px-4 py-2 rounded-xl border border-blue-100/20 w-fit">
+                {t.whatIDo.cards[1].tech}
+              </div>
+            </motion.div>
+
+            {/* Card 3: Operations Consultant */}
+            <motion.div 
+              whileHover={{ y: -8 }}
+              className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.01)] hover:shadow-[0_20px_60px_rgba(59,130,246,0.06)] hover:border-blue-100 transition-all flex flex-col relative overflow-hidden group"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-bl-[50px] pointer-events-none group-hover:scale-110 transition-transform" />
+              <div className="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center mb-8 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                <BarChart3 size={24} />
+              </div>
+              <h3 className="text-2xl font-black mb-4 text-gray-900">{t.whatIDo.cards[2].title}</h3>
+              <p className="text-gray-500 leading-relaxed font-medium mb-8 flex-grow">
+                {t.whatIDo.cards[2].desc}
+              </p>
+              <div className="text-[11px] font-black text-emerald-600 tracking-wider uppercase bg-emerald-50/50 px-4 py-2 rounded-xl border border-emerald-100/20 w-fit">
+                {t.whatIDo.cards[2].tech}
+              </div>
+            </motion.div>
+
+            {/* Card 4: Content Creator */}
+            <motion.div 
+              whileHover={{ y: -8 }}
+              className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.01)] hover:shadow-[0_20px_60px_rgba(59,130,246,0.06)] hover:border-blue-100 transition-all flex flex-col relative overflow-hidden group"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-red-500/5 rounded-bl-[50px] pointer-events-none group-hover:scale-110 transition-transform" />
+              <div className="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mb-8 text-red-500 group-hover:bg-red-500 group-hover:text-white transition-colors">
+                <Play size={24} className="translate-x-0.5" />
+              </div>
+              <h3 className="text-2xl font-black mb-4 text-gray-900">{t.whatIDo.cards[3].title}</h3>
+              <p className="text-gray-500 leading-relaxed font-medium mb-8 flex-grow">
+                {t.whatIDo.cards[3].desc}
+              </p>
+              <div className="text-[11px] font-black text-red-600 tracking-wider uppercase bg-red-50/50 px-4 py-2 rounded-xl border border-red-100/20 w-fit">
+                {t.whatIDo.cards[3].tech}
+              </div>
+            </motion.div>
+
+            {/* Card 5: Corporate Trainer */}
+            <motion.div 
+              whileHover={{ y: -8 }}
+              className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.01)] hover:shadow-[0_20px_60px_rgba(59,130,246,0.06)] hover:border-blue-100 transition-all flex flex-col relative overflow-hidden group"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-amber-500/5 rounded-bl-[50px] pointer-events-none group-hover:scale-110 transition-transform" />
+              <div className="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center mb-8 text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                <GraduationCap size={24} />
+              </div>
+              <h3 className="text-2xl font-black mb-4 text-gray-900">{t.whatIDo.cards[4].title}</h3>
+              <p className="text-gray-500 leading-relaxed font-medium mb-8 flex-grow">
+                {t.whatIDo.cards[4].desc}
+              </p>
+              <div className="text-[11px] font-black text-amber-600 tracking-wider uppercase bg-amber-50/50 px-4 py-2 rounded-xl border border-amber-100/20 w-fit">
+                {t.whatIDo.cards[4].tech}
+              </div>
+            </motion.div>
+
+            {/* Card 6: Creative Director */}
+            <motion.div 
+              whileHover={{ y: -8 }}
+              className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.01)] hover:shadow-[0_20px_60px_rgba(59,130,246,0.06)] hover:border-blue-100 transition-all flex flex-col relative overflow-hidden group"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-purple-500/5 rounded-bl-[50px] pointer-events-none group-hover:scale-110 transition-transform" />
+              <div className="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center mb-8 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                <Palette size={24} />
+              </div>
+              <h3 className="text-2xl font-black mb-4 text-gray-900">{t.whatIDo.cards[5].title}</h3>
+              <p className="text-gray-500 leading-relaxed font-medium mb-8 flex-grow">
+                {t.whatIDo.cards[5].desc}
+              </p>
+              <div className="text-[11px] font-black text-purple-600 tracking-wider uppercase bg-purple-50/50 px-4 py-2 rounded-xl border border-purple-100/20 w-fit">
+                {t.whatIDo.cards[5].tech}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+
 
       {/* Social Proof / Clients */}
       <section className="py-32 bg-white border-y border-gray-50">
@@ -867,8 +1146,8 @@ const AhmedPortfolio = () => {
           >
             <div className="aspect-square rounded-[4rem] bg-gray-100 overflow-hidden shadow-2xl border-8 border-white">
               <img 
-                src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1000" 
-                alt="Professional Consultant"
+                src="https://res.cloudinary.com/deuwh0ysg/image/upload/v1780799105/Gemini_Generated_Image_aodtozaodtozaodt_zmhses.png" 
+                alt="Ahmed Amir"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                 referrerPolicy="no-referrer"
               />
